@@ -1,21 +1,6 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import {
-  Alert,
-  Button,
-  FlatList,
-  Image,
-  KeyboardAvoidingView,
-  Modal,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-
+import { Alert, Button, FlatList, Image, KeyboardAvoidingView, Modal, Platform, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, } from 'react-native';
 import SearchBar from '../components/searchbar';
 
 const DATA = [
@@ -32,14 +17,14 @@ export default function Home() {
 
   const handleCloseModal = () => {
     setModalVisible(false);
-    Alert.alert('Modal Closed', 'Thanks for checking the modal!');
+    Alert.alert('Modal Closed', 'Thanks for checking the modal come again!');
   };
 
   const handleButtonPress = () => {
     if (userInput.trim()) {
-      Alert.alert('Submitted', `You entered: ${userInput}`);
+      Alert.alert('Submitted', `You entered the manga/anime: ${userInput}`);
     } else {
-      Alert.alert('Oops', 'Please type something first!');
+      Alert.alert('Oops', 'Please type something first !');
     }
   };
 
@@ -87,9 +72,7 @@ export default function Home() {
             <Text style={styles.touchableText}>Submit</Text>
           </TouchableOpacity>
 
-          <Button
-            title="Go to Orders"
-            onPress={() => router.push('/Orders')}
+          <Button title="Go to Orders" onPress={() => router.push('/Orders')}
           />
         </View>
 
